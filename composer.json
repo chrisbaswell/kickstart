@@ -1,24 +1,26 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "chrisbaswell/kickstart",
+    "description": "This is my package kickstart",
     "keywords": [
-        ":vendor_name",
+        "chrisbaswell",
         "laravel",
-        ":package_slug"
+        "kickstart"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/chrisbaswell/kickstart",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Chris Baswell",
+            "email": "me@chrisbaswell.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.73"
+        "filament/forms": "^2.0",
+        "filament/tables": "^2.0",
+        "illuminate/contracts": "^8.73",
+        "spatie/laravel-package-tools": "^1.9.2"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +36,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Baswell\\Kickstart\\": "src",
+            "Baswell\\Kickstart\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Baswell\\Kickstart\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Baswell\\Kickstart\\KickstartServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Kickstart": "Baswell\\Kickstart\\Facades\\Kickstart"
             }
         }
     },

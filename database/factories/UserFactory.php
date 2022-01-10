@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace App\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
-/*
-class ModelFactory extends Factory
+class UserFactory extends Factory
 {
-    protected $model = YourModel::class;
+    protected $model = User::class;
 
     public function definition()
     {
@@ -16,4 +16,3 @@ class ModelFactory extends Factory
         ];
     }
 }
-*/
