@@ -122,7 +122,7 @@ class KickstartCommand extends Command
         $filesystem->copyDirectory(__DIR__.'/../../stubs/resources/views/layouts', resource_path('views/layouts'));
 
         // Vendor view overrides...
-        $filesystem->copyDirectory(__DIR__.'/../../stubs/resources/views/vendor', resource_path('views/vendor'));
+        $filesystem->copyDirectory(__DIR__.'/../../stubs/resources/views/vendor-overrides', resource_path('views/vendor'));
     }
 
     /**
