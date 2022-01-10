@@ -2,10 +2,10 @@
 
 namespace Baswell\Kickstart;
 
-use Illuminate\Support\Facades\Blade;
-use Spatie\LaravelPackageTools\Package;
-use Illuminate\View\Compilers\BladeCompiler;
 use Baswell\Kickstart\Commands\KickstartCommand;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\View\Compilers\BladeCompiler;
+use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class KickstartServiceProvider extends PackageServiceProvider
