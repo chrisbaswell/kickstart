@@ -28,9 +28,9 @@
                                 value="{{ $value }}"
                                 {{ $applyStateBindingModifiers('wire:model') }}="{{ $getStatePath() }}"
                                 {{ $getExtraInputAttributeBag()->class([
-                                    'focus:ring-primary-500 h-5 w-5 text-primary-500',
+                                    'focus:ring-primary-500 h-4 w-4 text-primary-600',
                                     'border-base-300' => ! $errors->has($getStatePath()),
-                                    'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
+                                    'border-danger-600 ring-danger-600' => $errors->has($getStatePath()),
                                 ]) }}
                                 {!! $isOptionDisabled($value, $label) ? 'disabled' : null !!}
                             />

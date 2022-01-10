@@ -1,4 +1,4 @@
-<x-kickstart::button
+<x-tables::button
     :type="$canSubmitForm() ? 'submit' : 'button'"
     :wire:click="$getAction()"
     :x-on:click="$canCancelAction() ? 'isOpen = false' : null"
@@ -7,4 +7,4 @@
     :icon-position="$getIconPosition()"
 >
     {{ $getLabel() }}
-</x-kickstart::button>
+</x-tables::button>

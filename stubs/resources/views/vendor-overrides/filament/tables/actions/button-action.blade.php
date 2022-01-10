@@ -11,7 +11,7 @@
     }
 @endphp
 
-<x-kickstart::button
+<x-tables::button
     :tag="((! $action) && $url) ? 'a' : 'button'"
     :wire:click="$clickAction"
     :href="$getUrl()"
@@ -22,4 +22,4 @@
     size="sm"
 >
     {{ $getLabel() }}
-</x-kickstart::button>
+</x-tables::button>

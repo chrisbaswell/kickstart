@@ -41,7 +41,7 @@
     <div class="hidden flex-1 items-center lg:grid grid-cols-3">
         <div class="flex items-center">
             @if ($isSimple)
-                <x-kickstart::button
+                <x-tables::button
                     :wire:click="'previousPage(\'' . $paginator->getPageName() . '\')'"
                     icon="heroicon-s-chevron-left"
                     :disabled="$paginator->onFirstPage()"
@@ -50,7 +50,7 @@
                     color="secondary"
                 >
                     {{ __('tables::table.pagination.buttons.previous.label') }}
-                </x-kickstart::button>
+                </x-tables::button>
             @else
                 <div class="pl-2 text-sm font-medium">
                     @if ($paginator->total() > 1)
@@ -70,7 +70,7 @@
 
         <div class="flex items-center justify-end">
             @if ($isSimple)
-                <x-kickstart::button
+                <x-tables::button
                     :wire:click="'nextPage(\'' . $paginator->getPageName() . '\')'"
                     icon="heroicon-s-chevron-right"
                     icon-position="after"
@@ -80,7 +80,7 @@
                     color="secondary"
                 >
                     {{ __('tables::table.pagination.buttons.next.label') }}
-                </x-kickstart::button>
+                </x-tables::button>
             @else
                 @if ($paginator->hasPages())
                     <div class="py-3 border rounded-lg">
