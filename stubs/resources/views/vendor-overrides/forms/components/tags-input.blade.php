@@ -61,7 +61,7 @@
                             @endunless
                             type="button"
                             @class([
-                                'inline-flex items-center justify-center h-6 px-2 my-1 text-sm font-medium tracking-tight text-primary-700 rounded-full bg-primary-500/10 space-x-1',
+                                'inline-flex items-center justify-center h-6 px-2 my-1 text-sm font-medium tracking-tight text-primary-700 rounded-full bg-primary-600/10 space-x-1',
                                 'cursor-default' => $isDisabled(),
                             ])
                         >
