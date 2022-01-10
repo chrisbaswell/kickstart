@@ -8,8 +8,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                base: colors.zinc,
+                primary: colors.sky,
+                success: colors.emerald,
+                warning: colors.amber,
                 danger: colors.rose,
-                primary: colors.blue,
             },
         },
     },

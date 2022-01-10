@@ -14,6 +14,10 @@ class KickstartCommand extends Command
 
     public function handle(): int
     {
+        $this->callSilent('vendor:publish', ['--tag' => 'kickstart-config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'tables-config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'forms-config', '--force' => true]);
+
         static::updateNpmPackages();
 
         static::copyFiles();
@@ -89,6 +93,9 @@ class KickstartCommand extends Command
 
         // Factories...
         copy(__DIR__.'/../../database/factories/UserFactory.php', base_path('database/factories/UserFactory.php'));
+
+        // Migrations...
+        copy(__DIR__.'/../../database/migrations/2014_10_12_000000_create_users_table.php', base_path('database/migrations/2014_10_12_000000_create_users_table.php'));
 
         // View Components...
         copy(__DIR__.'/../../stubs/app/View/Components/AppLayout.php', app_path('View/Components/AppLayout.php'));
