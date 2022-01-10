@@ -1,9 +1,9 @@
 @php
     $stateColor = match ($getStateColor()) {
-        'danger' => 'text-danger-500',
-        'primary' => 'text-primary-500',
-        'success' => 'text-success-500',
-        'warning' => 'text-warning-500',
+        'danger' => 'text-danger-600',
+        'primary' => 'text-primary-600',
+        'success' => 'text-success-600',
+        'warning' => 'text-warning-600',
         default => 'text-base-700',
     };
 @endphp

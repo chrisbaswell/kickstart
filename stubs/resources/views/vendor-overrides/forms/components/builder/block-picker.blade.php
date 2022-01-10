@@ -20,7 +20,7 @@
                     class="flex items-center w-full h-8 px-3 text-sm font-medium focus:outline-none hover:text-white hover:bg-primary-600 focus:bg-primary-700 focus:text-white group"
                 >
                     @if ($icon = $block->getIcon())
-                        <x-dynamic-component :component="$icon" class="mr-2 -ml-1 text-primary-500 w-5 h-5 group-hover:text-white group-focus:text-white" />
+                        <x-dynamic-component :component="$icon" class="mr-2 -ml-1 text-primary-600 w-5 h-5 group-hover:text-white group-focus:text-white" />
                     @endif
 
                     {{ $block->getLabel() }}

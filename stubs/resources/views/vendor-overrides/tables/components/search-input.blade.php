@@ -4,7 +4,7 @@
     </label>
 
     <div class="relative group">
-        <span class="absolute inset-y-0 left-0 flex items-center justify-center w-9 h-9 text-base-400 pointer-events-none group-focus-within:text-primary-500">
+        <span class="absolute inset-y-0 left-0 flex items-center justify-center w-9 h-9 text-base-400 pointer-events-none group-focus-within:text-primary-600">
             <x-heroicon-o-search class="w-5 h-5" />
         </span>
 

@@ -9,11 +9,11 @@
 @php
     $buttonClasses = [
         'flex items-center justify-center w-10 h-10 rounded-full hover:bg-base-500/5 focus:outline-none',
-        'text-primary-500 focus:bg-primary-500/10' => $color === 'primary',
-        'text-danger-500 focus:bg-danger-500/10' => $color === 'danger',
-        'text-base-500 focus:bg-base-500/10' => $color === 'secondary',
-        'text-success-500 focus:bg-success-500/10' => $color === 'success',
-        'text-warning-500 focus:bg-warning-500/10' => $color === 'warning',
+        'text-primary-600 focus:bg-primary-500/10' => $color === 'primary',
+        'text-danger-600 focus:bg-danger-500/10' => $color === 'danger',
+        'text-base-600 focus:bg-base-500/10' => $color === 'secondary',
+        'text-success-600 focus:bg-success-500/10' => $color === 'success',
+        'text-warning-600 focus:bg-warning-500/10' => $color === 'warning',
     ];
 
     $iconClasses = 'w-5 h-5';

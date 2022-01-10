@@ -2,7 +2,7 @@
     $datalistOptions = $getDatalistOptions();
 
     $sideLabelClasses = [
-        'whitespace-nowrap group-focus-within:text-primary-500',
+        'whitespace-nowrap group-focus-within:text-primary-600',
         'text-base-400' => ! $errors->has($getStatePath()),
         'text-danger-400' => $errors->has($getStatePath()),
     ];

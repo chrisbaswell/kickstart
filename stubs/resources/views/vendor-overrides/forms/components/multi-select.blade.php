@@ -102,7 +102,7 @@
                                 role="option"
                                 x-bind:aria-selected="focusedOptionIndex === index"
                                 x-bind:class="{
-                                    'text-white bg-primary-500': index === focusedOptionIndex,
+                                    'text-white bg-primary-600': index === focusedOptionIndex,
                                     'text-base-900': index !== focusedOptionIndex,
                                 }"
                                 class="relative py-2 pl-3 h-10 flex items-center text-base-900 cursor-default select-none pr-9"
@@ -120,9 +120,9 @@
                                     x-show="state.indexOf(key) >= 0"
                                     x-bind:class="{
                                         'text-white': index === focusedOptionIndex,
-                                        'text-primary-500': index !== focusedOptionIndex,
+                                        'text-primary-600': index !== focusedOptionIndex,
                                     }"
-                                    class="absolute inset-y-0 right-0 flex items-center pr-4 text-primary-500"
+                                    class="absolute inset-y-0 right-0 flex items-center pr-4 text-primary-600"
                                 >
                                     <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
@@ -155,7 +155,7 @@
                         @endunless
                         type="button"
                         @class([
-                            'inline-flex items-center justify-center h-6 px-2 my-1 text-sm font-medium tracking-tight text-primary-700 rounded-full bg-primary-500/10 space-x-1 rtl:space-x-reverse',
+                            'inline-flex items-center justify-center h-6 px-2 my-1 text-sm font-medium tracking-tight text-primary-700 rounded-full bg-primary-600/10 space-x-1 rtl:space-x-reverse',
                             'cursor-default' => $isDisabled(),
                         ])
                     >
