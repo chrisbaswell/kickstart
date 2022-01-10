@@ -18,9 +18,9 @@
         <div
             x-show="state.length || {{ $isDisabled() ? 'false' : 'true' }}"
             @class([
-                'block w-full transition duration-75 divide-y rounded-lg shadow-sm border overflow-hidden focus-within:border-primary-600 focus-within:ring-1 focus-within:ring-primary-600',
+                'block border w-full p-3 transition duration-75 divide-y-3 rounded-lg overflow-hidden outline-none appearance-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500'
                 'border-base-300' => ! $errors->has($getStatePath()),
-                'border-danger-600 ring-danger-600' => $errors->has($getStatePath()),
+                'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
             ])
         >
             @unless ($isDisabled())
