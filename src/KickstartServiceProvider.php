@@ -3,9 +3,9 @@
 namespace Baswell\Kickstart;
 
 use Baswell\Kickstart\Commands\KickstartCommand;
+use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Illuminate\Support\Facades\Blade;
 
 class KickstartServiceProvider extends PackageServiceProvider
 {
