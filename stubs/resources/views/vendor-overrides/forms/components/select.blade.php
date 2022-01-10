@@ -15,7 +15,7 @@
             {!! $isRequired() ? 'required' : null !!}
             {{ $applyStateBindingModifiers('wire:model') }}="{{ $getStatePath() }}"
             {{ $attributes->merge($getExtraAttributes())->class([
-                'text-base-900 block border w-full h-10 px-3 transition duration-75 rounded-lg outline-none appearance-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500'
+                'text-base-900 block border w-full h-10 px-3 transition duration-75 rounded-lg outline-none appearance-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500',
                 'border-base-300' => ! $errors->has($getStatePath()),
                 'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
                 'bg-white' => ! $isDisabled(),
@@ -69,7 +69,7 @@
                     tabindex="1"
                 @endunless
                 @class([
-                    'relative flex items-center h-10 pl-3 pr-10 border overflow-hidden duration-75 rounded-lg shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 focus:outline-none',
+                    'text-base-900 relative flex items-center border w-full h-10 pl-3 px-10 overflow-hidden transition duration-75 rounded-lg outline-none appearance-none focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500',
                     'border-base-300' => ! $errors->has($getStatePath()),
                     'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
                     'bg-white' => ! $isDisabled(),
