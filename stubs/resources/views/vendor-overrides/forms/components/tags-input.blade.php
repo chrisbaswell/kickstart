@@ -51,7 +51,7 @@
 
             <div
                 x-show="state.length"
-                class="overflow-hidden rtl:space-x-reverse relative w-full px-1 py-1"
+                class="overflow-hidden rtl:space-x-reverse relative w-full px-1 py-1 bg-white border-b-lg"
             >
                 <div class="flex flex-wrap gap-1">
                     <template class="inline" x-for="tag in state" x-bind:key="tag">
