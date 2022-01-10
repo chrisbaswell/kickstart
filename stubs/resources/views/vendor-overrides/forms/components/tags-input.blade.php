@@ -18,7 +18,7 @@
         <div
             x-show="state.length || {{ $isDisabled() ? 'false' : 'true' }}"
             @class([
-                'block border w-full p-3 transition duration-75 divide-y-3 rounded-lg overflow-hidden outline-none appearance-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500',
+                'block border w-full transition duration-75 divide rounded-lg overflow-hidden outline-none appearance-none focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500',
                 'border-base-300' => ! $errors->has($getStatePath()),
                 'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
             ])
@@ -36,7 +36,7 @@
                         x-on:keydown.,.stop.prevent="createTag()"
                         x-on:blur="createTag()"
                         x-model="newTag"
-                        {{ $getExtraInputAttributeBag()->class(['block w-full border-0']) }}
+                        {{ $getExtraInputAttributeBag()->class(['block w-full border-0 h-10 px-3']) }}
                     />
 
                     <datalist id="{{ $getId() }}-suggestions">
@@ -51,7 +51,7 @@
 
             <div
                 x-show="state.length"
-                class="overflow-hidden rtl:space-x-reverse relative w-full px-1 py-1"
+                class="overflow-hidden rtl:space-x-reverse relative w-full px-1 py-1 bg-base-50 border-top border-base-300"
             >
                 <div class="flex flex-wrap gap-1">
                     <template class="inline" x-for="tag in state" x-bind:key="tag">
