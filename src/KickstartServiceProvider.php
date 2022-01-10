@@ -2,9 +2,9 @@
 
 namespace Baswell\Kickstart;
 
+use Baswell\Kickstart\Commands\KickstartCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Baswell\Kickstart\Commands\KickstartCommand;
 
 class KickstartServiceProvider extends PackageServiceProvider
 {

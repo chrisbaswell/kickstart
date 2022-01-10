@@ -2,9 +2,9 @@
 
 namespace Baswell\Kickstart\Tests;
 
+use Baswell\Kickstart\KickstartServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Baswell\Kickstart\KickstartServiceProvider;
 
 class TestCase extends Orchestra
 {
