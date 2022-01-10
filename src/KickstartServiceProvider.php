@@ -13,7 +13,7 @@ class KickstartServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('kickstart')
+            ->name('laravel-kickstart')
             ->hasConfigFile()
             ->hasViews()
             ->hasCommand(KickstartCommand::class);
