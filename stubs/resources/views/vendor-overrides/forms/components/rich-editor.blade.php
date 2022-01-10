@@ -37,7 +37,7 @@
             <trix-toolbar id="trix-toolbar-{{ $getId() }}">
                 <div class="trix-button-row">
                     @if ($hasToolbarButton(['bold', 'italic', 'strike', 'link']))
-                        <span data-trix-button-group="text-tools" class="trix-button-group trix-button-group--text-tools border-base-300 text-base text-base-800 text-sm font-medium">
+                        <span data-trix-button-group="text-tools" class="trix-button-group trix-button-group--text-tools">
                             @if ($hasToolbarButton('bold'))
                                 <button
                                     data-trix-attribute="bold"
@@ -45,7 +45,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.bold') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-bold border-none bg-white hover:bg-base-100"
+                                    class="trix-button trix-button--icon trix-button--icon-bold"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.bold') }}
                                 </button>
@@ -58,7 +58,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.italic') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-italic border-none bg-white hover:bg-base-100"
+                                    class="trix-button trix-button--icon trix-button--icon-italic"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.italic') }}
                                 </button>
@@ -70,7 +70,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.strike') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-strike border-none bg-white hover:bg-base-100"
+                                    class="trix-button trix-button--icon trix-button--icon-strike"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.strike') }}
                                 </button>
@@ -84,7 +84,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.link') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-link border-none bg-white hover:bg-base-100"
+                                    class="trix-button trix-button--icon trix-button--icon-link"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.link') }}
                                 </button>
@@ -100,7 +100,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.h1') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-heading-1 border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-heading-1"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.h1') }}
                                 </button>
@@ -112,7 +112,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.h2') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button border-none"
+                                    class="trix-button"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.h2') }}
                                 </button>
@@ -124,7 +124,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.h3') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button border-none"
+                                    class="trix-button"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.h3') }}
                                 </button>
@@ -140,7 +140,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.blockquote') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-quote border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-quote"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.blockquote') }}
                                 </button>
@@ -152,7 +152,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.code_block') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-code border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-code"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.code_block') }}
                                 </button>
@@ -164,7 +164,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.bullet_list') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-bullet-list border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-bullet-list"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.bullet_list') }}
                                 </button>
@@ -176,7 +176,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.ordered_list') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-number-list border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-number-list"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.ordered_list') }}
                                 </button>
@@ -191,7 +191,7 @@
                                 title="{{ __('forms::components.rich_editor.toolbar_buttons.attach_files') }}"
                                 tabindex="-1"
                                 type="button"
-                                class="trix-button trix-button--icon trix-button--icon-attach border-none"
+                                class="trix-button trix-button--icon trix-button--icon-attach"
                             >
                                 {{ __('forms::components.rich_editor.toolbar_buttons.attach_files') }}
                             </button>
@@ -212,7 +212,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.undo') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-undo border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-undo"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.undo') }}
                                 </button>
@@ -225,7 +225,7 @@
                                     title="{{ __('forms::components.rich_editor.toolbar_buttons.redo') }}"
                                     tabindex="-1"
                                     type="button"
-                                    class="trix-button trix-button--icon trix-button--icon-redo border-none"
+                                    class="trix-button trix-button--icon trix-button--icon-redo"
                                 >
                                     {{ __('forms::components.rich_editor.toolbar_buttons.redo') }}
                                 </button>
@@ -254,14 +254,14 @@
                                     value="{{ __('forms::components.rich_editor.dialogs.link.buttons.link') }}"
                                     data-trix-method="setAttribute"
                                     type="button"
-                                    class="trix-button trix-button--dialog border-none"
+                                    class="trix-button trix-button--dialog"
                                 >
 
                                 <input
                                     value="{{ __('forms::components.rich_editor.dialogs.link.buttons.unlink') }}"
                                     data-trix-method="removeAttribute"
                                     type="button"
-                                    class="trix-button trix-button--dialog border-none border-none"
+                                    class="trix-button trix-button--dialog"
                                 >
                             </div>
                         </div>
@@ -277,9 +277,9 @@
                 toolbar="trix-toolbar-{{ $getId() }}"
                 x-ref="trix"
                 @class([
-                    'bg-white block w-full transition duration-75 rounded-lg shadow-sm focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-600 prose max-w-none',
+                    'block border bg-white w-full p-3 transition duration-75 rounded-lg outline-none appearance-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 prose max-w-none',
                     'border-base-300' => ! $errors->has($getStatePath()),
-                    'border-danger-600 ring-danger-600' => $errors->has($getStatePath()),
+                    'border-danger-500 ring-danger-500' => $errors->has($getStatePath()),
                 ])
             />
         @else
