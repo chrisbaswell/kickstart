@@ -83,7 +83,7 @@ class KickstartCommand extends Command
         }
 
         if (! Str::contains(file_get_contents(base_path('routes/web.php')), "'/dashboard'")) {
-            (new Filesystem())->append(base_path('routes/web.php'), $this->livewireRouteDefinition());
+            (new Filesystem)->append(base_path('routes/web.php'), $this->routeDefinition());
         }
 
         // Tailwind Configuration...
