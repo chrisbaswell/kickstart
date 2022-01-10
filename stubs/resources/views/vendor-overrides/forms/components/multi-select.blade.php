@@ -48,7 +48,7 @@
                     class="relative overflow-hidden"
                     x-bind:class="{
                         'rounded-lg': ! state.length,
-                        'rounded-lg-t': state.length,
+                        'rounded-t-lg': state.length,
                     }"
                 >
                     <input
@@ -87,7 +87,7 @@
                     x-bind:aria-activedescendant="focusedOptionIndex ? '{{ $getStatePath() }}' + 'Option' + focusedOptionIndex : null"
                     tabindex="-1"
                     x-cloak
-                    class="absolute z-10 w-full my-1 bg-white border border-base-300 rounded-lg shadow-sm focus:outline-none transition"
+                    class="absolute z-10 w-full my-1 border border-base-300 rounded-lg shadow-sm focus:outline-none transition"
                 >
                     <ul
                         x-ref="listboxOptionsList"
@@ -145,7 +145,7 @@
 
         <div
             x-show="state.length"
-            class="overflow-hidden rtl:space-x-reverse border-lg-b relative w-full px-1 py-1 bg-white"
+            class="overflow-hidden rtl:space-x-reverse border-lg-b relative w-full px-1 py-1"
         >
             <div class="flex flex-wrap gap-1">
                 <template class="inline" x-for="option in state" x-bind:key="option">
