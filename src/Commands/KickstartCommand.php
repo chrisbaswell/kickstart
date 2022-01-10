@@ -15,7 +15,6 @@ class KickstartCommand extends Command
     public function handle(): int
     {
         $this->callSilent('vendor:publish', ['--tag' => 'kickstart-config', '--force' => true]);
-        $this->callSilent('vendor:publish', ['--tag' => 'kickstart-views', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'tables-config', '--force' => true]);
         $this->callSilent('vendor:publish', ['--tag' => 'forms-config', '--force' => true]);
 

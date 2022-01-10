@@ -17,19 +17,12 @@ class KickstartServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasCommand(KickstartCommand::class);
-
-        $this->configureComponents();
     }
 
-    /**
-     * Configure the Blade components.
-     *
-     * @return void
-     */
-    protected function configureComponents()
+    public function packageBooted()
     {
         $this->callAfterResolving(BladeCompiler::class, function () {
-            $this->registerComponent('button');
+            $this->bootComponent('button');
         });
     }
 
@@ -39,7 +32,7 @@ class KickstartServiceProvider extends PackageServiceProvider
      * @param  string  $component
      * @return void
      */
-    protected function registerComponent(string $component)
+    protected function bootComponent(string $component)
     {
         Blade::component('kickstart::components.'.$component, 'ui-'.$component);
     }
