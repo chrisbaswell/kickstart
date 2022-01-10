@@ -17,7 +17,7 @@
                 x-bind:aria-checked="state.toString()"
                 x-on:click="state = ! state"
                 x-bind:class="{
-                    'bg-primary-600': state,
+                    'bg-primary-500': state,
                     'bg-base-200': ! state,
                 }"
                 x-cloak
@@ -61,7 +61,7 @@
                         }"
                     >
                         @if ($hasOnIcon())
-                            <x-dynamic-component :component="$getOnIcon()" class="bg-white h-3 w-3 text-primary-600" />
+                            <x-dynamic-component :component="$getOnIcon()" class="bg-white h-3 w-3 text-primary-500" />
                         @endif
                     </span>
                 </span>
