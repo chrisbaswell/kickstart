@@ -5,6 +5,7 @@ namespace Baswell\Kickstart\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 class KickstartCommand extends Command
 {
@@ -20,7 +21,7 @@ class KickstartCommand extends Command
 
         static::updateNpmPackages();
 
-        static::copyFiles();
+        $this->configureFiles();
 
         $this->info('Kickstarted app successfully.');
 
@@ -55,8 +56,9 @@ class KickstartCommand extends Command
     {
         return array_merge(
             [
-                '@tailwindcss/forms' => '^0.4',
                 '@tailwindcss/typography' => '^0.5',
+                '@tailwindcss/line-clamp' => '^0.2',
+                '@tailwindcss/aspect-ratio' => '^0.3',
                 'alpinejs' => '^3.4',
                 'tailwindcss' => '^3.0',
             ],
@@ -67,12 +69,24 @@ class KickstartCommand extends Command
         );
     }
 
-    protected static function copyFiles(): void
+    protected function configureFiles(): void
     {
         $filesystem = new Filesystem();
         $filesystem->delete(resource_path('js/bootstrap.js'));
 
-        // Tailwind Configuration
+        // Dashboard...
+        $this->replaceInFile('/home', '/dashboard', app_path('Providers/RouteServiceProvider.php'));
+
+        if (file_exists(resource_path('views/welcome.blade.php'))) {
+            $this->replaceInFile('/home', '/dashboard', resource_path('views/welcome.blade.php'));
+            $this->replaceInFile('Home', 'Dashboard', resource_path('views/welcome.blade.php'));
+        }
+
+        if (! Str::contains(file_get_contents(base_path('routes/web.php')), "'/dashboard'")) {
+            (new Filesystem)->append(base_path('routes/web.php'), $this->livewireRouteDefinition());
+        }
+
+        // Tailwind Configuration...
         copy(__DIR__.'/../../stubs/tailwind.config.js', base_path('tailwind.config.js'));
         copy(__DIR__.'/../../stubs/webpack.mix.js', base_path('webpack.mix.js'));
 
@@ -101,10 +115,40 @@ class KickstartCommand extends Command
         copy(__DIR__.'/../../stubs/app/View/Components/AppLayout.php', app_path('View/Components/AppLayout.php'));
         copy(__DIR__.'/../../stubs/app/View/Components/GuestLayout.php', app_path('View/Components/GuestLayout.php'));
 
+        // Single Blade Views...
+        copy(__DIR__.'/../../stubs/resources/views/dashboard.blade.php', resource_path('views/dashboard.blade.php'));
+
         // Layouts...
         $filesystem->copyDirectory(__DIR__.'/../../stubs/resources/views/layouts', resource_path('views/layouts'));
 
         // Vendor view overrides...
         $filesystem->copyDirectory(__DIR__.'/../../stubs/resources/views/vendor', resource_path('views/vendor'));
+    }
+
+    /**
+     * Replace a given string within a given file.
+     *
+     * @param  string  $search
+     * @param  string  $replace
+     * @param  string  $path
+     * @return void
+     */
+    protected function replaceInFile($search, $replace, $path)
+    {
+        file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
+    }
+
+    /**
+     * Get the route definition(s) that should be installed
+     *
+     * @return string
+     */
+    protected function routeDefinition()
+    {
+        return <<<'EOF'
+Route::middleware(['auth'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+EOF;
     }
 }
