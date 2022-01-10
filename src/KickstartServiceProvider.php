@@ -2,9 +2,10 @@
 
 namespace Baswell\Kickstart;
 
-use Baswell\Kickstart\Commands\KickstartCommand;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
+use Illuminate\View\Compilers\BladeCompiler;
+use Baswell\Kickstart\Commands\KickstartCommand;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class KickstartServiceProvider extends PackageServiceProvider
@@ -16,10 +17,12 @@ class KickstartServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasCommand(KickstartCommand::class);
+
+        $this->configureComponents();
     }
 
     /**
-     * Configure the Jetstream Blade components.
+     * Configure the Blade components.
      *
      * @return void
      */
