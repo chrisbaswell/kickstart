@@ -90,7 +90,7 @@
                 <button
                     x-on:click="addRow"
                     type="button"
-                    class="w-full px-4 py-2 flex items-center space-x-1 text-sm font-medium text-base-800 hover:bg-base-50 focus:bg-base-50"
+                    class="w-full px-4 py-2 flex items-center space-x-1 text-sm font-medium text-base-600 hover:bg-base-50 focus:bg-base-50"
                 >
                     <x-heroicon-s-plus class="w-4 h-4" />
 
