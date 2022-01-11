@@ -2,32 +2,34 @@
 
 namespace Baswell\Kickstart;
 
-use Baswell\Kickstart\Commands\KickstartCommand;
-use Baswell\Kickstart\Contracts\FailedPasswordConfirmationResponse as FailedPasswordConfirmationResponseContract;
-use Baswell\Kickstart\Contracts\FailedPasswordResetLinkRequestResponse as FailedPasswordResetLinkRequestResponseContract;
-use Baswell\Kickstart\Contracts\FailedPasswordResetResponse as FailedPasswordResetResponseContract;
-use Baswell\Kickstart\Contracts\LoginResponse as LoginResponseContract;
-use Baswell\Kickstart\Contracts\LogoutResponse as LogoutResponseContract;
-use Baswell\Kickstart\Contracts\PasswordConfirmedResponse as PasswordConfirmedResponseContract;
-use Baswell\Kickstart\Contracts\PasswordResetResponse as PasswordResetResponseContract;
-use Baswell\Kickstart\Contracts\PasswordUpdateResponse as PasswordUpdateResponseContract;
-use Baswell\Kickstart\Contracts\RegisterResponse as RegisterResponseContract;
-use Baswell\Kickstart\Contracts\SuccessfulPasswordResetLinkRequestResponse as SuccessfulPasswordResetLinkRequestResponseContract;
-use Baswell\Kickstart\Http\Responses\FailedPasswordConfirmationResponse;
-use Baswell\Kickstart\Http\Responses\FailedPasswordResetLinkRequestResponse;
-use Baswell\Kickstart\Http\Responses\FailedPasswordResetResponse;
-use Baswell\Kickstart\Http\Responses\LoginResponse;
-use Baswell\Kickstart\Http\Responses\LogoutResponse;
-use Baswell\Kickstart\Http\Responses\PasswordConfirmedResponse;
-use Baswell\Kickstart\Http\Responses\PasswordResetResponse;
-use Baswell\Kickstart\Http\Responses\PasswordUpdateResponse;
-use Baswell\Kickstart\Http\Responses\RegisterResponse;
-use Baswell\Kickstart\Http\Responses\SuccessfulPasswordResetLinkRequestResponse;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
-use Illuminate\View\Compilers\BladeCompiler;
+use Illuminate\Support\Facades\Auth;
 use Spatie\LaravelPackageTools\Package;
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\View\Compilers\BladeCompiler;
+use Baswell\Kickstart\Commands\KickstartCommand;
+use Baswell\Kickstart\Http\Responses\LoginResponse;
+use Baswell\Kickstart\Http\Responses\LogoutResponse;
+use Baswell\Kickstart\Http\Responses\RegisterResponse;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Baswell\Kickstart\Http\Responses\PasswordResetResponse;
+use Baswell\Kickstart\Http\Responses\PasswordUpdateResponse;
+use Baswell\Kickstart\Http\Responses\PasswordConfirmedResponse;
+use Baswell\Kickstart\Http\Responses\FailedPasswordResetResponse;
+use Baswell\Kickstart\Contracts\LoginResponse as LoginResponseContract;
+use Baswell\Kickstart\Http\Responses\FailedPasswordConfirmationResponse;
+use Baswell\Kickstart\Contracts\LogoutResponse as LogoutResponseContract;
+use Baswell\Kickstart\Http\Responses\FailedPasswordResetLinkRequestResponse;
+use Baswell\Kickstart\Contracts\RegisterResponse as RegisterResponseContract;
+use Baswell\Kickstart\Http\Responses\SuccessfulPasswordResetLinkRequestResponse;
+use Baswell\Kickstart\Contracts\PasswordResetResponse as PasswordResetResponseContract;
+use Baswell\Kickstart\Contracts\PasswordUpdateResponse as PasswordUpdateResponseContract;
+use Baswell\Kickstart\Contracts\PasswordConfirmedResponse as PasswordConfirmedResponseContract;
+use Baswell\Kickstart\Contracts\FailedPasswordResetResponse as FailedPasswordResetResponseContract;
+use Baswell\Kickstart\Contracts\FailedPasswordConfirmationResponse as FailedPasswordConfirmationResponseContract;
+use Baswell\Kickstart\Contracts\FailedPasswordResetLinkRequestResponse as FailedPasswordResetLinkRequestResponseContract;
+use Baswell\Kickstart\Contracts\SuccessfulPasswordResetLinkRequestResponse as SuccessfulPasswordResetLinkRequestResponseContract;
 
 class KickstartServiceProvider extends PackageServiceProvider
 {
@@ -42,6 +44,10 @@ class KickstartServiceProvider extends PackageServiceProvider
 
     public function packageRegistered()
     {
+        $this->app->bind(StatefulGuard::class, function () {
+            return Auth::guard('web');
+        });
+
         $this->app->singleton(FailedPasswordConfirmationResponseContract::class, FailedPasswordConfirmationResponse::class);
         $this->app->singleton(FailedPasswordResetLinkRequestResponseContract::class, FailedPasswordResetLinkRequestResponse::class);
         $this->app->singleton(FailedPasswordResetResponseContract::class, FailedPasswordResetResponse::class);
