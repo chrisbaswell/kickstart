@@ -13,7 +13,7 @@
                 @foreach ($containers as $uuid => $item)
                     <li
                         wire:key="{{ $item->getStatePath() }}"
-                        class="relative p-6 bg-white shadow-sm rounded-lg border border-base-300"
+                        class="relative p-6 bg-white rounded-lg border border-base-300"
                     >
                         {{ $item }}
 

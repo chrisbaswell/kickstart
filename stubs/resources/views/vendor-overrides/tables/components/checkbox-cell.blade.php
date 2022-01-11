@@ -8,6 +8,6 @@
         {{ $checked ? 'checked' : null }}
         wire:click="{{ $onClick }}"
         type="checkbox"
-        class="border-base-300 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50"
+        class="border-base-300 rounded text-primary-600 focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50"
     />
 </th>

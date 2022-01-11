@@ -53,7 +53,7 @@
             @endunless
             type="button"
             {{ $getExtraTriggerAttributeBag()->class([
-                'bg-white relative w-full border pl-3 pr-10 py-2 text-left cursor-default rounded-lg shadow-sm focus-within:border-primary-600 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-600',
+                'bg-white relative w-full border pl-3 pr-10 py-2 text-left cursor-default rounded-lg focus-within:border-primary-600 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-600',
                 'border-base-300' => ! $errors->has($getStatePath()),
                 'border-danger-600 motion-safe:animate-shake' => $errors->has($getStatePath()),
                 'text-base-500' => $isDisabled(),
@@ -83,7 +83,7 @@
                 role="dialog"
                 x-cloak
                 @class([
-                    'absolute z-10 my-1 bg-white border border-base-300 rounded-lg shadow-sm',
+                    'absolute z-10 my-1 bg-white border border-base-300 rounded-lg',
                     'p-4 w-64' => $hasDate(),
                 ])
             >

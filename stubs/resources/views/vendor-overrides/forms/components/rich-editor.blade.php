@@ -277,13 +277,13 @@
                 toolbar="trix-toolbar-{{ $getId() }}"
                 x-ref="trix"
                 @class([
-                    'bg-white block w-full transition duration-75 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600 prose max-w-none',
+                    'bg-white block w-full transition duration-75 rounded-lg focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600 prose max-w-none',
                     'border-base-300' => ! $errors->has($getStatePath()),
                     'border-danger-600 ring-danger-600' => $errors->has($getStatePath()),
                 ])
             />
         @else
-            <div x-html="state" class="p-3 prose border border-base-300 rounded shadow-sm"></div>
+            <div x-html="state" class="p-3 prose border border-base-300 rounded"></div>
         @endunless
     </div>
 </x-forms::field-wrapper>
