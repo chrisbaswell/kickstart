@@ -88,6 +88,7 @@ class KickstartCommand extends Command
         }
 
         // Directories...
+        $filesystem->ensureDirectoryExists(app_path('Actions/Auth'));
         $filesystem->ensureDirectoryExists(app_path('View/Components'));
         $filesystem->ensureDirectoryExists(app_path('Models'));
         $filesystem->ensureDirectoryExists(resource_path('js'));
