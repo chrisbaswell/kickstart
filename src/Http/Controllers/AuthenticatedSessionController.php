@@ -2,19 +2,17 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Baswell\Kickstart\Fortify;
-use Baswell\Kickstart\Features;
-use Baswell\Kickstart\Kickstart;
-use Illuminate\Routing\Pipeline;
-use Illuminate\Routing\Controller;
-use Illuminate\Contracts\Auth\StatefulGuard;
-use Baswell\Kickstart\Contracts\LoginResponse;
-use Baswell\Kickstart\Contracts\LogoutResponse;
-use Baswell\Kickstart\Http\Requests\LoginRequest;
-use Baswell\Kickstart\Contracts\LoginViewResponse;
 use Baswell\Kickstart\Actions\AttemptToAuthenticate;
 use Baswell\Kickstart\Actions\PrepareAuthenticatedSession;
+use Baswell\Kickstart\Contracts\LoginResponse;
+use Baswell\Kickstart\Contracts\LoginViewResponse;
+use Baswell\Kickstart\Contracts\LogoutResponse;
+use Baswell\Kickstart\Http\Requests\LoginRequest;
+use Baswell\Kickstart\Kickstart;
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Routing\Pipeline;
 
 class AuthenticatedSessionController extends Controller
 {

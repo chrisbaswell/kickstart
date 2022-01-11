@@ -9,9 +9,7 @@ use Baswell\Kickstart\Contracts\RegisterViewResponse;
 use Baswell\Kickstart\Contracts\RequestPasswordResetLinkViewResponse;
 use Baswell\Kickstart\Contracts\ResetPasswordViewResponse;
 use Baswell\Kickstart\Contracts\ResetsUserPasswords;
-use Baswell\Kickstart\Contracts\TwoFactorChallengeViewResponse;
 use Baswell\Kickstart\Contracts\UpdatesUserPasswords;
-use Baswell\Kickstart\Contracts\UpdatesUserProfileInformation;
 use Baswell\Kickstart\Contracts\VerifyEmailViewResponse;
 use Baswell\Kickstart\Http\Responses\SimpleViewResponse;
 

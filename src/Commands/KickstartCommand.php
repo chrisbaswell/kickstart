@@ -61,7 +61,7 @@ class KickstartCommand extends Command
                 '@tailwindcss/aspect-ratio' => '^0.3',
                 'alpinejs' => '^3.7',
                 'tailwindcss' => '^3.0',
-                '@alpinejs/trap' => '^3.7'
+                '@alpinejs/trap' => '^3.7',
             ],
             Arr::except($packages, [
                 'axios',

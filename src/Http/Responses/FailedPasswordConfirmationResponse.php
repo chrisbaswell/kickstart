@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Validation\ValidationException;
 use Baswell\Kickstart\Contracts\FailedPasswordConfirmationResponse as FailedPasswordConfirmationResponseContract;
+use Illuminate\Validation\ValidationException;
 
 class FailedPasswordConfirmationResponse implements FailedPasswordConfirmationResponseContract
 {

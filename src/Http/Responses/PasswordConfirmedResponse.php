@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Http\JsonResponse;
 use Baswell\Kickstart\Contracts\PasswordConfirmedResponse as PasswordConfirmedResponseContract;
+use Illuminate\Http\JsonResponse;
 
 class PasswordConfirmedResponse implements PasswordConfirmedResponseContract
 {

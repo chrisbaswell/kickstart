@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Http\JsonResponse;
 use Baswell\Kickstart\Contracts\RegisterResponse as RegisterResponseContract;
+use Illuminate\Http\JsonResponse;
 
 class RegisterResponse implements RegisterResponseContract
 {

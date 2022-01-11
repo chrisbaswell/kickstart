@@ -2,14 +2,14 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
+use Baswell\Kickstart\Contracts\FailedPasswordResetLinkRequestResponse;
+use Baswell\Kickstart\Contracts\RequestPasswordResetLinkViewResponse;
+use Baswell\Kickstart\Contracts\SuccessfulPasswordResetLinkRequestResponse;
+use Illuminate\Contracts\Auth\PasswordBroker;
+use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Password;
-use Illuminate\Contracts\Auth\PasswordBroker;
-use Illuminate\Contracts\Support\Responsable;
-use Baswell\Kickstart\Contracts\RequestPasswordResetLinkViewResponse;
-use Baswell\Kickstart\Contracts\FailedPasswordResetLinkRequestResponse;
-use Baswell\Kickstart\Contracts\SuccessfulPasswordResetLinkRequestResponse;
 
 class PasswordResetLinkController extends Controller
 {

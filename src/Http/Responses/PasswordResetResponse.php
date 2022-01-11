@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Http\JsonResponse;
 use Baswell\Kickstart\Contracts\PasswordResetResponse as PasswordResetResponseContract;
+use Illuminate\Http\JsonResponse;
 
 class PasswordResetResponse implements PasswordResetResponseContract
 {

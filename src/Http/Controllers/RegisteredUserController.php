@@ -2,13 +2,13 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Contracts\Auth\StatefulGuard;
 use Baswell\Kickstart\Contracts\CreatesNewUsers;
 use Baswell\Kickstart\Contracts\RegisterResponse;
 use Baswell\Kickstart\Contracts\RegisterViewResponse;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class RegisteredUserController extends Controller
 {

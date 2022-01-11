@@ -2,10 +2,10 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
+use Baswell\Kickstart\Contracts\PasswordUpdateResponse;
+use Baswell\Kickstart\Contracts\UpdatesUserPasswords;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Baswell\Kickstart\Contracts\UpdatesUserPasswords;
-use Baswell\Kickstart\Contracts\PasswordUpdateResponse;
 
 class PasswordController extends Controller
 {

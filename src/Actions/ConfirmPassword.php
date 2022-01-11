@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Actions;
 
-use Illuminate\Contracts\Auth\StatefulGuard;
 use Baswell\Kickstart\Kickstart;
+use Illuminate\Contracts\Auth\StatefulGuard;
 
 class ConfirmPassword
 {

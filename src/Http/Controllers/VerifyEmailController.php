@@ -2,10 +2,10 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
+use Baswell\Kickstart\Http\Requests\VerifyEmailRequest;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
-use Illuminate\Auth\Events\Verified;
-use Baswell\Kickstart\Http\Requests\VerifyEmailRequest;
 
 class VerifyEmailController extends Controller
 {

@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Validation\ValidationException;
 use Baswell\Kickstart\Contracts\FailedPasswordResetLinkRequestResponse as FailedPasswordResetLinkRequestResponseContract;
+use Illuminate\Validation\ValidationException;
 
 class FailedPasswordResetLinkRequestResponse implements FailedPasswordResetLinkRequestResponseContract
 {

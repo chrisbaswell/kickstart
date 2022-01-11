@@ -2,17 +2,17 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
+use Baswell\Kickstart\Actions\CompletePasswordReset;
+use Baswell\Kickstart\Contracts\FailedPasswordResetResponse;
+use Baswell\Kickstart\Contracts\PasswordResetResponse;
+use Baswell\Kickstart\Contracts\ResetPasswordViewResponse;
+use Baswell\Kickstart\Contracts\ResetsUserPasswords;
+use Illuminate\Contracts\Auth\PasswordBroker;
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Password;
-use Illuminate\Contracts\Auth\StatefulGuard;
-use Illuminate\Contracts\Auth\PasswordBroker;
-use Illuminate\Contracts\Support\Responsable;
-use Baswell\Kickstart\Actions\CompletePasswordReset;
-use Baswell\Kickstart\Contracts\ResetsUserPasswords;
-use Baswell\Kickstart\Contracts\PasswordResetResponse;
-use Baswell\Kickstart\Contracts\ResetPasswordViewResponse;
-use Baswell\Kickstart\Contracts\FailedPasswordResetResponse;
 
 class NewPasswordController extends Controller
 {

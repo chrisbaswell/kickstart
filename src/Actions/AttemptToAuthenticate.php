@@ -2,10 +2,10 @@
 
 namespace Baswell\Kickstart\Actions;
 
+use Baswell\Kickstart\Kickstart;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Validation\ValidationException;
-use Baswell\Kickstart\Kickstart;
 
 class AttemptToAuthenticate
 {

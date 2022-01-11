@@ -2,13 +2,13 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
-use Illuminate\Contracts\Auth\StatefulGuard;
 use Baswell\Kickstart\Actions\ConfirmPassword;
-use Baswell\Kickstart\Contracts\PasswordConfirmedResponse;
 use Baswell\Kickstart\Contracts\ConfirmPasswordViewResponse;
 use Baswell\Kickstart\Contracts\FailedPasswordConfirmationResponse;
+use Baswell\Kickstart\Contracts\PasswordConfirmedResponse;
+use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ConfirmablePasswordController extends Controller
 {

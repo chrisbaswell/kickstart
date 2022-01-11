@@ -2,13 +2,13 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Contracts\Support\Responsable;
 use Baswell\Kickstart\Contracts\ConfirmPasswordViewResponse;
 use Baswell\Kickstart\Contracts\LoginViewResponse;
 use Baswell\Kickstart\Contracts\RegisterViewResponse;
 use Baswell\Kickstart\Contracts\RequestPasswordResetLinkViewResponse;
 use Baswell\Kickstart\Contracts\ResetPasswordViewResponse;
 use Baswell\Kickstart\Contracts\VerifyEmailViewResponse;
+use Illuminate\Contracts\Support\Responsable;
 
 class SimpleViewResponse implements
     LoginViewResponse,

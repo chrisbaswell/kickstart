@@ -2,8 +2,8 @@
 
 namespace Baswell\Kickstart\Http\Responses;
 
-use Illuminate\Http\JsonResponse;
 use Baswell\Kickstart\Contracts\LogoutResponse as LogoutResponseContract;
+use Illuminate\Http\JsonResponse;
 
 class LogoutResponse implements LogoutResponseContract
 {

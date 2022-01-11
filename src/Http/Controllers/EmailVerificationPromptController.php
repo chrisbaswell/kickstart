@@ -2,9 +2,9 @@
 
 namespace Baswell\Kickstart\Http\Controllers;
 
+use Baswell\Kickstart\Contracts\VerifyEmailViewResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Baswell\Kickstart\Contracts\VerifyEmailViewResponse;
 
 class EmailVerificationPromptController extends Controller
 {
