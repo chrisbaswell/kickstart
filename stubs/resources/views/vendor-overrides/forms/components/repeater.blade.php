@@ -71,7 +71,7 @@
             <button
                 wire:click="dispatchFormEvent('repeater::createItem', '{{ $getStatePath() }}')"
                 type="button"
-                class="w-full h-9 px-4 inline-flex space-x-1 items-center justify-center font-medium tracking-tight rounded-lg text-base-800 bg-white border border-base-300 hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600"
+                class="w-full h-9 px-4 inline-flex space-x-1 items-center justify-center font-medium tracking-tight rounded-lg text-base-600 text-sm bg-white border border-base-300 hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600"
             >
                 <x-heroicon-s-plus class="w-5 h-5" />
 

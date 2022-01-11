@@ -16,7 +16,7 @@
                         x-on:click="isCreateButtonVisible = true"
                         x-on:click.away="isCreateButtonVisible = false"
                         wire:key="{{ $item->getStatePath() }}"
-                        class="relative p-6 bg-white shadow-sm rounded-lg border border-base-300"
+                        class="relative p-6 bg-white rounded-lg border border-base-300"
                     >
                         {{ $item }}
 
@@ -76,7 +76,7 @@
                                     <button
                                         x-on:click="isCreateButtonDropdownOpen = true"
                                         type="button"
-                                        class="flex items-center justify-center h-8 w-8 rounded-full border border-base-300 text-base-800 bg-white hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-white focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50"
+                                        class="flex items-center justify-center h-8 w-8 rounded-full border border-base-300 text-base-600 bg-white hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-white focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50"
                                         x-bind:class="{
                                             'bg-base-50': isCreateButtonDropdownOpen,
                                         }"
@@ -106,7 +106,7 @@
                 <button
                     x-on:click="isCreateButtonDropdownOpen = true"
                     type="button"
-                    class="w-full h-9 px-4 inline-flex space-x-1 items-center justify-center font-medium tracking-tight rounded-lg text-base-800 bg-white border border-base-300 hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600"
+                    class="w-full h-9 px-4 inline-flex space-x-1 items-center justify-center font-medium tracking-tight rounded-lg text-base-600 text-sm bg-white border border-base-300 hover:bg-base-50 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:text-primary-600 focus:bg-primary-50 focus:border-primary-600"
                 >
                     <x-heroicon-s-plus class="w-5 h-5" />
 
